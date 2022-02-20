@@ -103,6 +103,7 @@ wineDataNorm <- as.data.frame(scale(wineDataClean3))
 wineDataNorm
 
 #Normalize Data with Min-Max Scaling in R
+library(caret)
 wineDataProcess <- preProcess(as.data.frame(wineDataClean3), method=c("range"))
 wineDataNormScale <- predict(wineDataProcess, as.data.frame(wineDataClean3))
 wineDataNormScale
